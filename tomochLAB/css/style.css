@@ -140,6 +140,7 @@ img {
 }
 /*animation*/
 /* mv */
+
 .mv {
   display: flex;
   align-items: center;
@@ -158,7 +159,7 @@ img {
   transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-  font-size: 8em;
+  font-size: 10vw;
 }
 .mv-container h1:nth-child(1){
   color: transparent;
@@ -178,7 +179,7 @@ img {
   }
 }
 .mv-title-mini{
-  font-size: 4em;
+  font-size: 6vw;
   color: rgba(255, 255, 255, 0);
 }
 .mv-title {
@@ -327,14 +328,31 @@ img {
   color: #797979;
 }
 /* opus*/
-.opus-item{
-  display: flex;
-}
 .opus-item .opus-name{
   font-size: 22px;
-  padding: 80px 100px;
+  padding: 20px 0px;
 }
-
+.video-wrap {
+  max-width: 50%; /* ここに動画の横幅を指定 */
+}
+.video {
+  position: relative;
+  width:100%; /* 横幅は100%で固定 */
+  height:0; /* 高さは0にしておく(padding-topで高さを指定するため) */
+  padding-top: 56.25%; /* 高さを指定(16:9) */
+}
+.video iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media screen and(min-width: 466px) {
+  .opus-img{
+    clip:rect(1px,1px,1px,1px);
+  }
+}
 
 /* works bottom */
 .article {
